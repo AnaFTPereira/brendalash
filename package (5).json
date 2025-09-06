@@ -1,0 +1,17 @@
+{
+  "name": "@my-monorepo/ui",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "generate:component": "npx hygen component new"
+  },
+  "devDependencies": {
+    "@my-monorepo/eslint-config": "*",
+    "@my-monorepo/typescript-config": "*",
+    "react": "^18.2.0",
+    "typescript": "^5.1.3"
+  }
+}
+

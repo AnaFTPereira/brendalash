@@ -1,0 +1,11 @@
+{
+  "home": {
+    "title": "Welcome to my portfolio!",
+    "description": "I am a full-stack and mobile engineer with a passion for creating amazing digital experiences."
+  },
+  "event": {
+    "title": "Our Next Event",
+    "description": "Join us for an unmissable event on the latest trends in software development."
+  }
+}
+

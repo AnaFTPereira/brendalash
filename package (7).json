@@ -1,0 +1,10 @@
+{
+  "name": "@my-monorepo/utils",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@my-monorepo/typescript-config": "*"
+  }
+}
+

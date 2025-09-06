@@ -1,0 +1,183 @@
+Você é um senior full-stack + mobile engineer em uma multinacional. Gere um repositório Git completo, pronto para GitHub, que contenha:
+
+Site institucional (Next.js, TypeScript, Tailwind CSS), totalmente responsivo, acessível, SEO otimizado e pronto para deploy no GitHub Pages ou Vercel.
+
+Aplicativo mobile (Expo, React Native, TypeScript, NativeWind) para Android/iOS, com mesma identidade visual, focado em UX mobile-first, pronto para build via Expo EAS.
+Ambos devem compartilhar conteúdo, branding e lógica em um monorepo organizado.
+
+Objetivo
+
+Web responsivo (desktop/tablet/mobile) + App mobile.
+
+Home (profissional): bio, serviços, galeria, depoimentos, agendamento, contato.
+
+Página/Tela Evento: hero, descrição, programação, instrutor, inscrição (RSVP + exemplo Stripe), local (mapa), galeria, FAQ.
+
+Design unificado → cores, tipografia, ícones.
+
+Internacionalização (pt/en).
+
+Documentação completa no README.md.
+
+CI/CD para Web (GitHub Pages/Vercel) e Mobile (Expo EAS).
+
+Testes (unitários e e2e).
+
+Requisitos técnicos
+
+Monorepo com Turborepo (ou Nx).
+
+Stacks:
+
+Web → Next.js 13+, TypeScript, Tailwind CSS, ESLint, Prettier.
+
+Mobile → Expo (React Native), NativeWind, React Navigation.
+
+Shared → conteúdo (MD/JSON), utils (validações, i18n).
+
+Estrutura de pastas:
+
+/ (repo root)
+├─ apps/
+│  ├─ web/              # Next.js site
+│  │  ├─ pages/
+│  │  ├─ components/
+│  │  ├─ styles/
+│  │  └─ ...
+│  └─ mobile/           # Expo app
+│     ├─ app/
+│     ├─ components/
+│     ├─ assets/
+│     └─ ...
+├─ packages/
+│  ├─ ui/               # Design system compartilhado
+│  ├─ content/          # Conteúdo em Markdown/JSON
+│  ├─ utils/            # Validações, helpers
+│  └─ config/           # Tailwind, tema, i18n
+├─ tests/
+│  ├─ unit/
+│  └─ e2e/
+├─ .github/
+│  └─ workflows/        # CI/CD
+├─ turbo.json
+├─ package.json
+├─ tsconfig.json
+├─ README.md
+├─ LICENSE
+└─ .gitignore
+
+Funcionalidades comuns (Web + Mobile)
+
+Home: hero, bio, serviços (cards), portfólio (galeria com zoom), depoimentos, CTA de agendamento (WhatsApp/formulário).
+
+Evento: hero com título, data, local, descrição, programação, instrutor, inscrição (formulário RSVP + Stripe demo), mapa, FAQ, galeria.
+
+Contato: formulário + WhatsApp + redes sociais.
+
+Agendamento: formulário validado + link direto para WhatsApp.
+
+Internacionalização: packages/content → pt.json e en.json.
+
+Responsividade & UX
+
+Web:
+
+Grid flexível (Tailwind).
+
+Breakpoints otimizados para mobile-first (sm, md, lg, xl).
+
+Galeria responsiva (carrossel + modal).
+
+Mobile (Expo):
+
+Navegação → bottom tab (Home | Serviços | Evento | Contato).
+
+Carrosséis touch-friendly.
+
+Mapa interativo (Expo Location + MapView).
+
+Animações suaves (Reanimated + Moti).
+
+Integrações
+
+WhatsApp: link universal (wa.me).
+
+Formulários: client-side + API (SendGrid placeholder).
+
+Stripe: demo de checkout para inscrição no evento.
+
+Analytics: GA4 no Web (via consentimento), Expo Analytics no Mobile.
+
+Mapa: Google Maps iframe (Web) e react-native-maps (Mobile).
+
+Acessibilidade
+
+Web: semântica HTML, ARIA, contraste ≥ 4.5:1, navegação por teclado.
+
+Mobile: suporte a screen readers, labels acessíveis, foco visual em inputs.
+
+Design
+
+Cores unificadas:
+
+Primary: #b95fa6
+
+Accent: #f7e9f2
+
+Dark: #111827
+
+Gold: #D4AF37
+
+Tipografia: Google Fonts (Web) e Expo Fonts (Mobile).
+
+UI: packages/ui → Botões, Inputs, Cards, Modal, etc.
+
+CI/CD
+
+Web:
+
+GitHub Actions → lint, test, build, deploy (gh-pages ou Vercel).
+
+Mobile:
+
+GitHub Actions → lint, test, build com Expo EAS.
+
+Pre-commit: Husky + lint-staged.
+
+Testes
+
+Unitários: Jest + React Testing Library (Web e Mobile).
+
+E2E:
+
+Web → Playwright.
+
+Mobile → Detox.
+
+README
+
+Instruções de setup do monorepo.
+
+Como rodar Web (apps/web) e Mobile (apps/mobile).
+
+Como compartilhar conteúdo (packages/content).
+
+Como buildar para produção (Web export + Expo EAS).
+
+Variáveis de ambiente (.env.example).
+
+Checklist de publicação (textos, imagens, políticas).
+
+Entregáveis esperados
+
+Web: rodando em npm run dev e exportável para GitHub Pages.
+
+Mobile: rodando em expo start e buildável para APK/IPA.
+
+Shared: conteúdo único, usado em ambos.
+
+CI/CD funcionando para Web + Mobile.
+
+Testes passando.
+
+README completo.
