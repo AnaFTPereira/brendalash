@@ -1,0 +1,757 @@
+/* Variáveis CSS para cores e fontes */
+:root {
+    --primary-color: #66099c;
+    --secondary-color: #ffffff;
+    --dark-color: #000000;
+    --light-color: #ffffff;
+    --gray-color: #1a1a1a;
+    --dark-gray: #333333;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Cormorant Garamond', serif;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 5px 15px rgba(102, 9, 156, 0.5);
+    --border-radius: 15px;
+}
+
+/* Importação de fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--light-color);
+    line-height: 1.6;
+    background-color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button, .btn {
+    cursor: pointer;
+    border: none;
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: var(--transition);
+    margin-top: 10px;
+}
+
+button:hover, .btn:hover {
+    background: var(--secondary-color);
+    color: var(--dark-color);
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--light-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-color);
+}
+
+/* Header e Navegação */
+header {
+    background-color: var(--dark-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--light-color);
+    transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(106, 1, 167, 0.7), rgba(0, 0, 0, 0.7)), no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-color);
+    margin-top: -252px;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-logo {
+    max-width: 250px;
+    margin: 0 auto 20px;
+}
+
+.hero-title {
+    font-family: var(--font-secondary);
+    font-size: 4rem;
+    margin-bottom: 70px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.about-image2 {
+    width: 100%;
+    max-width: 400px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 5px solid rgba(102, 9, 156, 0.3);
+}
+
+.about-text {
+    width: 100%;
+    text-align: center;
+}
+
+.about-text h2 {
+    font-family: var(--font-secondary);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    text-shadow: 10px 10px 7px rgba(143, 44, 209, 0.486);
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 30fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: var(--gray-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+    border: 1px solid rgba(102, 9, 156, 0.3);
+}
+
+.service-card:hover {
+    transform: translateY(-17px);
+    border-color: var(--primary-color);
+}
+
+.service-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.service-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Booking Section */
+.booking-form {
+    background: var(--gray-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgba(102, 9, 156, 0.3);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    background: #222;
+    color: var(--light-color);
+}
+
+/* Contact Section */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-icon {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.map-container {
+    height: 250px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: var(--light-color);
+    padding: 40px 0 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.footer-logo {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-logo span {
+    color: var(--secondary-color);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(102, 9, 156, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-heading {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: var(--secondary-color);
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.footer-links a {
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+    padding-left: 5px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Event Page Styles */
+.event-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(42, 28, 51, 0.7), rgba(0, 0, 0, 0.7)), url('./imagens/img2.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-color);
+    margin-top: 70px;
+    padding: 0 20px;
+    border-radius: var(--border-radius);
+}
+
+.event-date {
+    background: var(--secondary-color);
+    color: var(--dark-color);
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    margin: 15px 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Programação do Evento - Novo Layout */
+.schedule-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.schedule-item {
+    position: relative;
+    margin-bottom: 3px;
+    background: var(--gray-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    border: 1px solid rgba(102, 9, 156, 0.3);
+    transition: var(--transition);
+}
+
+.schedule-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 25px rgba(102, 9, 156, 0.4);
+}
+
+.schedule-header {
+    background: linear-gradient(1000deg, #21042e, #7e20a7);
+    color: var(--light-color);
+    padding: 10px 20px;
+    display: flow-root;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.schedule-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.schedule-item:hover .schedule-header::before {
+    left: 100%;
+}
+
+.schedule-time {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-right: 0px;
+    padding: 7px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.schedule-title {
+    font-size: 1rem;
+    font-weight: 600;
+    flex: 1;
+}
+
+.schedule-details {
+    padding: 15px 20px;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.schedule-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Linha conectora entre itens */
+.schedule-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 24px;
+    background: linear-gradient(to bottom, var(--primary-color), transparent);
+    z-index: 10;
+}
+
+/* Indicador de horário especial */
+.schedule-item.highlight {
+    border-color: var(--secondary-color);
+    background: linear-gradient(135deg, var(--gray-color), #ffffff);
+}
+
+.schedule-item.highlight .schedule-header {
+    background: linear-gradient(135deg, var(--secondary-color), #ffffff);
+    color: var(--dark-color);
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    border: 1px solid rgba(102, 9, 156, 0.3);
+}
+
+.faq-question {
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.faq-answer {
+    padding: 15px;
+    background: var(--gray-color);
+    display: none;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background: var(--dark-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+        padding: 20px 0;
+        border-top: 1px solid var(--primary-color);
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 12px 0;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    .about-content {
+        gap: 20px;
+    }
+    
+    .about-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery-item {
+        height: 150px;
+    }
+    
+    .booking-form {
+        padding: 20px;
+    }
+    
+    .event-hero {
+        height: 40vh;
+    }
+    
+    /* Programação responsiva */
+    .schedule-container {
+        padding: 10px;
+    }
+    
+    .schedule-header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 15px;
+    }
+    
+    .schedule-time {
+        font-size: 1rem;
+        margin-right: 0;
+        padding: 60px 10px;
+    }
+    
+    .schedule-title {
+        font-size: 0.9rem;
+    }
+    
+    .schedule-details {
+        padding: 12px 15px;
+    }
+    
+    .schedule-details p {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item {
+        height: 200px;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 25px;
+    }
+}
