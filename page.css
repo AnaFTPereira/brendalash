@@ -46,22 +46,50 @@ img {
     display: block;
 }
 
+.botao {
+    cursor: pointer;
+    border: none;
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 12px 3px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin: 10px auto; /* ✅ centraliza horizontalmente */
+    text-align: center;
+    display: block;
+    width: 50%;
+     margin-top: 300px;
+}
+
 button, .btn {
     cursor: pointer;
     border: none;
     background: var(--primary-color);
     color: var(--light-color);
-    padding: 12px 24px;
-    border-radius: var(--border-radius);
+    padding: 12px 3px;
+    border-radius: 20px;
     font-weight: 600;
-    transition: var(--transition);
-    margin-top: 10px;
+    margin: 10px auto; /* ✅ centraliza horizontalmente */
+    text-align: center;
+    display: block;
+    width: 50%;
+}
+
+
+.basic {
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-color);
+    margin-top: 0px;
+    padding: 05 200px;
+    border-radius: var(--border-radius);
 }
 
 button:hover, .btn:hover {
-    background: var(--secondary-color);
-    color: var(--dark-color);
-    transform: translateY(-3px);
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--light-color);
     box-shadow: var(--box-shadow);
 }
 
@@ -230,7 +258,7 @@ header {
 
 /* Services Section */
 .services-grid {
-    display: grid;
+    display: inline;
     grid-template-columns: repeat(auto-fit, minmax(70px, 30fr));
     gap: 20px;
 }
