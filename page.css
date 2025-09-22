@@ -46,6 +46,10 @@ img {
     display: block;
 }
 
+.texto {
+    text-align: center;
+}
+
 .botao {
     cursor: pointer;
     border: none;
